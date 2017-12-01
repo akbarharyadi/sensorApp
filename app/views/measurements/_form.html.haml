@@ -1,0 +1,20 @@
+= form_with(model: measurement, local: true) do |form|
+  - if measurement.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(measurement.errors.count, "error")
+        prohibited this measurement from being saved:
+      %ul
+        - measurement.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = form.label :value_temp
+    = form.text_field :value_temp, id: :measurement_value_temp
+  .field
+    = form.label :value_hum
+    = form.text_field :value_hum, id: :measurement_value_hum
+  .field
+    = form.label :device_id
+    = form.text_field :device_id, id: :measurement_device_id
+  .actions
+    = form.submit

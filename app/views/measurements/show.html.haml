@@ -1,0 +1,13 @@
+%p#notice= notice
+%p
+  %strong Value temp:
+  = @measurement.value_temp
+%p
+  %strong Value hum:
+  = @measurement.value_hum
+%p
+  %strong Device:
+  = @measurement.device_id
+= link_to 'Edit', edit_measurement_path(@measurement)
+|
+= link_to 'Back', measurements_path
