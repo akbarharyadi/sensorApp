@@ -1,10 +1,47 @@
 !!!
-%html
+%html{:lang => "en"}
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title SensorApp
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
+    %meta{:content => "Just for fun", :name => "description"}/
+    %meta{:content => "Akbar Priyono Haryadi", :name => "author"}/
+    %title Akbar Priyono Haryadi
+    / Bootstrap core CSS
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    = yield
+    #wrapper.container-fluid
+      .row
+        %nav.sidebar.col-xs-12.col-sm-4.col-lg-3.col-xl-2.bg-faded.sidebar-style-1
+          %h1.site-title
+            %a{:href => "index.html"}
+              %em.fa.fa-rocket
+              A.P.H
+          %a#menu-toggle.btn.btn-default{:href => "#menu-toggle"}
+            %em.fa.fa-bars
+          %ul.nav.nav-pills.flex-column.sidebar-nav
+            %li.nav-item
+              %a.nav-link.active{:href => "index.html"}
+                %em.fa.fa-dashboard
+                Dashboard
+                %span.sr-only (current)
+            %li.nav-item
+              %a.nav-link{:href => "elements.html"}
+                %em.fa.fa-bar-chart
+                Measurements (History)
+        %main.col-xs-12.col-sm-8.offset-sm-4.col-lg-9.offset-lg-3.col-xl-10.offset-xl-2.pt-3.pl-4
+          %header.page-header.row.justify-center
+            .col-md-6.col-lg-8
+              %h1.float-left.text-center.text-md-left Dashboard
+            .col-md-6.col-lg-4.text-center.text-md-right
+            .clear
+          %section.row
+            .col-sm-12
+              %section.row
+                = yield
+              %section.row
+                .col-12.mt-1.mb-4
+                  Template by
+                  %a{:href => "https://www.medialoot.com"} Medialoot

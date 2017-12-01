@@ -8,8 +8,12 @@
 // compiled file. JavaScript code in this file should be added after the last require_* statement.
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
-// about supported directives.
+// about supported directives. 
+// use require bootstrap for fast compilation
 //
 //= require rails-ujs
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
