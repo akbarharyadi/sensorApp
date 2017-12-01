@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Value temp:</strong>
+  <%= @measurement.value_temp %>
+</p>
+
+<p>
+  <strong>Value hum:</strong>
+  <%= @measurement.value_hum %>
+</p>
+
+<p>
+  <strong>Device:</strong>
+  <%= @measurement.device_id %>
+</p>
+
+<%= link_to 'Edit', edit_measurement_path(@measurement) %> |
+<%= link_to 'Back', measurements_path %>

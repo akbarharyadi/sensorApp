@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  value_temp: 1.5
+  value_hum: 1.5
+  device_id: MyString
+
+two:
+  value_temp: 1.5
+  value_hum: 1.5
+  device_id: MyString
