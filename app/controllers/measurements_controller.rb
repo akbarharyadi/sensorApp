@@ -1,10 +1,10 @@
 class MeasurementsController < ApplicationController
   before_action :set_measurement, only: [:show, :edit, :update, :destroy]
-
+  helper SmartListing::Helper
   # GET /measurements
   # GET /measurements.json
   def index
-    @measurements = Measurement.all
+    @measurements = Measurement.order(created_at: :desc).all
   end
 
   # GET /measurements/1
@@ -62,13 +62,14 @@ class MeasurementsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_measurement
-      @measurement = Measurement.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def measurement_params
-      params.require(:measurement).permit(:value_temp, :value_hum, :device_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_measurement
+    @measurement = Measurement.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def measurement_params
+    params.require(:measurement).permit(:value_temp, :value_hum, :device_id)
+  end
 end

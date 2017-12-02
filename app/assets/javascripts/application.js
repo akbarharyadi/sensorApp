@@ -13,7 +13,21 @@
 //
 //= require rails-ujs
 //= require jquery3
+//= require jquery-ui
+//= require knockout
+//= require onmount
 //= require popper
 //= require bootstrap-sprockets
+//= require highcharts
+//= require highcharts/modules/annotations
+//= require highcharts/modules/data
+//= require highcharts/modules/drilldown
+//= require highcharts/modules/exporting
+//= require highcharts/modules/funnel
+//= require highcharts/modules/heatmap
+//= require highcharts/modules/no-data-to-display
+//= require highcharts/modules/offline-exporting
+//= require highcharts/themes/skies
+//= require smart_listing
 //= require turbolinks
 //= require_tree .

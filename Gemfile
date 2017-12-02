@@ -36,6 +36,13 @@ gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem "haml-rails", "~> 1.0"
 gem 'rails_12factor'
 gem "font-awesome-rails"
+gem 'highcharts-rails'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-onmount'
+end
+gem 'jquery-ui-rails'
+gem 'knockoutjs-rails'
+gem "smart_listing"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
