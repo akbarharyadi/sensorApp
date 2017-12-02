@@ -28,6 +28,5 @@
 //= require highcharts/modules/no-data-to-display
 //= require highcharts/modules/offline-exporting
 //= require highcharts/themes/skies
-//= require smart_listing
 //= require turbolinks
 //= require_tree .

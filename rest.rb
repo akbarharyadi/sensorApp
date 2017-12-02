@@ -4,8 +4,8 @@ require 'json'
 while true
   response = Net::HTTP.get(URI.parse("http://192.168.1.125/"))
   puts response
-  # uri = URI('https://sensor-app-arduino.herokuapp.com/measurements.json')
-  uri = URI('http://localhost/measurements.json')
+  uri = URI('https://sensor-app-arduino.herokuapp.com/measurements.json')
+  # uri = URI('http://localhost/measurements.json')
   req = Net::HTTP::Post.new(uri, 'Content-Type' => 'application/json')
   req.body = {
     "utf8": "✓",
